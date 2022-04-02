@@ -115,3 +115,58 @@ h3 {
 .pt-5 {
     padding-top: 5rem;
 }
+
+.form-control {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.form-control input {
+    margin: 0;
+    outline: none;
+    border: 2px solid #ccc;
+    display: block;
+    width: 100%;
+    color: #2c3e50;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.form-control label {
+    display: block;
+    margin: 0 0 0.3rem 0.3rem;
+    font-weight: 500;
+}
+
+.form-control input:active,
+.form-control input:focus {
+    transition: border 0.22s;
+    border: 2px solid #42b983;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+.card.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
