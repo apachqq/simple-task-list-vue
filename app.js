@@ -20,7 +20,12 @@ const App = {
         removeNote(idx) {
             this.notes.splice(idx, 1)
         }
-    }
+    },
+    computed: {
+        doubleCountComputed() {
+            return this.notes.length * 2
+        }
+    },
 }
 
 Vue.createApp(App).mount('#app')
