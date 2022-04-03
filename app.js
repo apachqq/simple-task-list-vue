@@ -17,6 +17,9 @@ const App = {
         toUpperCase(item) {
             return item.toUpperCase()
         },
+        removeNote(idx) {
+            this.notes.splice(idx, 1)
+        }
     }
 }
 
