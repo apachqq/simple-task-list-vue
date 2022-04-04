@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>simple-task-list-vue</title>
     <link rel="stylesheet" href="style.css"/>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container" id="app">
+<div class="container" id="app" v-cloak>
     <div class="card">
         <h1 :style="{color: inputValue.length < 5 ? 'darkred' : 'darkblue',
                         fontSize: inputValue.length < 5 ? '1.5rem' : '2rem'}">{{ title }}</h1>
