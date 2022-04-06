@@ -8,10 +8,12 @@
     <button class="btn" @click="addNewNote">Добавить</button>
     <hr/>
     <ul class="list" v-if="notes.length !== 0">
-        <li class="list-item" v-for="(note, idx) in notes">
+      <transition-group name="post-list">
+        <li class="list-item" v-for="(note, idx) in notes" :key="idx">
           <span :class="['bold', {'primary' : note.length > 5}]">{{ toUpperCase(note) }}</span>
           <button class="btn danger" v-on:click="removeNote(idx)">Удалить</button>
         </li>
+      </transition-group>
       <hr/>
       <li>
         <strong>Общее количество: {{ notes.length }}</strong> | Удвоенное: {{ doubleCountComputed }}
@@ -61,5 +63,17 @@ export default {
 </script>
 
 <style>
-
+.post-list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.post-list-enter-active,
+.post-list-leave-active {
+  transition: all 0.3s ease;
+}
+.post-list-enter-from,
+.post-list-leave-to {
+  opacity: 0;
+  transform: translateX(130px);
+}
 </style>
